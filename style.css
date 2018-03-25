@@ -1,0 +1,344 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#videoback {
+	height: 700px;
+    width: 100%;
+/*    background: url(../img/index-image.jpg) no-repeat center center;*/
+    background-size: cover;
+}
+#bgvid {
+	height: 700px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -100;
+    right: 0;
+    top: 0px;
+    background: url(../img/index-image.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.animate{
+    margin: 10px;
+}
+.animate h1{
+  color: #333; 
+  font-family: "Courier";
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20em;
+  animation: type 4s steps(60, end); 
+}
+
+.animate h1:nth-child(2){
+  animation: type2 4s steps(60, end);
+}
+
+.animate a{
+  color: lime;
+  text-decoration: none;
+}
+
+.animate .blink{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+.typewriter{
+    z-index: 1000;
+    width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    left:40%;
+    margin-left: -440px;
+    top:30%;
+    position: absolute;
+}
+.typewriter .first{
+  color: #000;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.typewriter .second{
+  color: #000;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+    animation-delay: 3s;
+    
+}
+.typewriter .third{
+  color: #000;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .10em; 
+  
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0;opacity: 1; }
+  to { width: 100%;opacity: 1; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+@-webkit-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@-moz-keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+@keyframes ani-mouse {
+	0% {
+	opacity: 1;
+	top: 29%;
+	}
+	15% {
+	opacity: 1;
+	top: 50%;
+	}
+	50% {
+	opacity: 0;
+	top: 50%;
+	}
+	100% {
+	opacity: 0;
+	top: 29%;
+	}
+}
+ .scroll-btn {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+     top:60%;
+	text-align: center;
+}
+.scroll-btn > * {
+	display: inline-block;
+	line-height: 18px;
+	font-size: 13px;
+	font-weight: normal;
+	color: #7f8c8d;
+	color: #000000;
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 2px;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *.active {
+	color: #ffffff;
+}
+.scroll-btn > *:hover,
+.scroll-btn > *:focus,
+.scroll-btn > *:active,
+.scroll-btn > *.active {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.scroll-btn .mouse {
+	position: relative;
+	display: block;
+	width: 35px;
+	height: 55px;
+	margin: 0 auto 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 3px solid #000;
+	border-radius: 23px;
+}
+.scroll-btn .mouse > * {
+	position: absolute;
+	display: block;
+	top: 0%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: -4px 0 0 -4px;
+	background: #000;
+	border-radius: 50%;
+	-webkit-animation: ani-mouse 2.5s linear infinite;
+	-moz-animation: ani-mouse 2.5s linear infinite;
+	animation: ani-mouse 2.5s linear infinite;
+}
+.wrapper{
+
+}
+.uk-container{
+    border-right: 1px dashed #ffd27f;
+     border-left: 1px dashed #ffd27f
+}
+.box-circle{        
+    width:100px;
+    height:64px;
+/*    background:rgba(0,0,0,0.8);*/
+    color:white;
+    font-weight: bold;
+    border-radius:100px;
+    text-align:center;
+    padding-top:33px;
+    position:absolute;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box-circle:hover{
+   transform: scale(1.1)
+/*    opacity: 1;*/
+}
+.box-circle h2{ 
+    font-weight: 300;
+}
+.a{
+    background: url('https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png') center center no-repeat;
+    background-size: cover;
+}
+.b{
+   background: url('https://image.flaticon.com/icons/png/512/69/69366.png') center center no-repeat;
+    background-size: cover;
+}
+.c{
+     background: url('http://www.iconarchive.com/download/i75851/martz90/circle/google-plus.ico') center center no-repeat;
+    background-size: cover;
+}
+.d{
+     background: url('http://icons.iconarchive.com/icons/sicons/basic-round-social/512/twitter-icon.png') center center no-repeat;
+    background-size: cover;
+;
+}
+.e{
+     background: url('https://freeiconshop.com/wp-content/uploads/edd/youtube-flat.png') center center no-repeat;
+    background-size: cover;
+}
+.f{
+    background: #b266b2;
+}
+@media screen and (min-width:1024px) and (max-width:1260px) {
+
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .uk-container{
+        width:90%;
+    }
+
+    .animate h1{
+  color: #333; 
+  font-family: "Courier";
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end); 
+}
+    .typewriter{
+    z-index: 1000;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    left:0%;
+    margin-left: 0px;
+    top:30%;
+    position: absolute;
+}
+    
+}
+@media screen and (max-width:767px) {
+.typewriter{
+    z-index: 1000;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    left:0%;
+    margin-left: 0px;
+    top:30%;
+    position: absolute;
+}
+     .animate h1{
+  color: #333; 
+  font-family: "Courier";
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+         font-size: 20px;
+  animation: type 4s steps(60, end); 
+}
+}
+
